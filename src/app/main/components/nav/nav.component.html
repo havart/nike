@@ -1,0 +1,25 @@
+<header class="padding-x py-8 absolute z-10 w-full">
+  <nav class="flex justify-between items-center max-container">
+    <a href="/">
+      <img src="assets/images/header-logo.svg" alt="Logo" srcset="" />
+    </a>
+    <ul class="flex-1 flex justify-center items-center gap-16 max-lg:hidden">
+      <li *ngFor="let link of navLinks">
+        <a
+          [href]="link.href"
+          class="font-montserrat leading-normal text-lg text-slate-gray"
+          >{{ link.label }}</a
+        >
+      </li>
+    </ul>
+    <div class="hidden max-lg:block">
+      <img
+        src="assets/icons/hamburger.svg"
+        alt="Hamburger"
+        srcset=""
+        width="25"
+        height="25"
+      />
+    </div>
+  </nav>
+</header>
