@@ -1,1 +1,5 @@
-<p>services works!</p>
+<section class="max-container flex justify-center flex-wrap gap-9">
+  <ng-container *ngFor="let service of services">
+    <app-service-card [service]="service"></app-service-card>
+  </ng-container>
+</section>

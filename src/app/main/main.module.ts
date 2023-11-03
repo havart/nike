@@ -13,6 +13,8 @@ import { HeroComponent } from './sections/hero/hero.component';
 import { NavComponent } from './components/nav/nav.component';
 import { BtnDirective } from './ui/btn.directive';
 import { ShoeCardComponent } from './components/shoe-card/shoe-card.component';
+import { PopularProductCardComponent } from './components/popular-product-card/popular-product-card.component';
+import { ServiceCardComponent } from './components/service-card/service-card.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { ShoeCardComponent } from './components/shoe-card/shoe-card.component';
     HeroComponent,
     NavComponent,
     ShoeCardComponent,
+    PopularProductCardComponent,
+    ServiceCardComponent,
   ],
   imports: [CommonModule, MainRoutingModule, BtnDirective],
 })
