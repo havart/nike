@@ -15,6 +15,7 @@ import { BtnDirective } from './ui/btn.directive';
 import { ShoeCardComponent } from './components/shoe-card/shoe-card.component';
 import { PopularProductCardComponent } from './components/popular-product-card/popular-product-card.component';
 import { ServiceCardComponent } from './components/service-card/service-card.component';
+import { ReviewCardComponent } from './components/review-card/review-card.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ServiceCardComponent } from './components/service-card/service-card.com
     ShoeCardComponent,
     PopularProductCardComponent,
     ServiceCardComponent,
+    ReviewCardComponent,
   ],
   imports: [CommonModule, MainRoutingModule, BtnDirective],
 })
