@@ -1,1 +1,36 @@
-<p>special-offer works!</p>
+<section
+  id="special-offer"
+  class="flex justify-wrap items-center max-xl:flex-col-reverse gap-10 max-container"
+>
+  <div class="flex-1">
+    <img
+      src="assets/images/offer.svg"
+      alt="Offer"
+      width="773"
+      height="687"
+      class="object-contain w-full"
+    />
+  </div>
+  <div class="flex flex-1 flex-col">
+    <h2 class="font-palanquin text-4xl font-bold lg:max-w-lg capitalize">
+      <span class="text-coral-red inline-block mt-3">Special</span> Offer
+    </h2>
+    <p class="mt-4 lg:max-w-lg info-text">
+      Embark on a shopping journey that redefines your experience with
+      unbeatable deals. From premier selections to incredible savings, we offer
+      unparalleled value that sets us apart.
+    </p>
+    <p class="mt-6 lg:max-w-lg info-text">
+      Navigate a realm of possibilities designed to fulfill your unique desires,
+      surpassing the loftiest expectations. Your journey with us is nothing
+      short of exceptional.
+    </p>
+    <div class="mt-11 flex flex-wrap gap-4">
+      <button btn [type]="btnType">
+        Show now
+        <img src="assets/icons/arrow-right.svg" alt="arrow right icon" />
+      </button>
+      <button btn class="">Learn more</button>
+    </div>
+  </div>
+</section>
