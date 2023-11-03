@@ -1,1 +1,19 @@
-<p>cutomer-reviews works!</p>
+<section id="review" class="max-container">
+  <h3 class="font-palanquin text-4xl font-bold text-center">
+    What Our
+    <span class="text-coral-red">Customers</span>
+    Say?
+  </h3>
+
+  <p class="mt-4 info-text m-auto max-w-lg text-center">
+    Here genuine stories from our satisfied customers about their exceptional
+    experiences with us.
+  </p>
+  <div
+    class="mt-24 flex flex-1 justify-evenly items-center max-lg:flex-col gap-14"
+  >
+    <ng-container *ngFor="let review of reviews">
+      <app-review-card [review]="review"></app-review-card>
+    </ng-container>
+  </div>
+</section>
