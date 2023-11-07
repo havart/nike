@@ -1,5 +1,16 @@
-<div class="min-h-full">
-  <h1 class="text-3xl font-bold underline">Hello world!</h1>
-  <h1>auth</h1>
-  <router-outlet></router-outlet>
-</div>
+<main class="relative max-container max-w-screen-sm">
+  <section>
+    <header class="padding-x py-8 z-10 w-full">
+      <nav class="flex justify-between items-center max-container">
+        <a href="/">
+          <img src="assets/images/header-logo.svg" alt="Logo" srcset="" />
+        </a>
+      </nav>
+    </header>
+  </section>
+  <main class="relative">
+    <section class="padding-x">
+      <router-outlet></router-outlet>
+    </section>
+  </main>
+</main>

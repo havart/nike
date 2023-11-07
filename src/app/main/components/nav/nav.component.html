@@ -5,11 +5,22 @@
     </a>
     <ul class="flex-1 flex justify-center items-center gap-16 max-lg:hidden">
       <li *ngFor="let link of navLinks">
-        <a
-          [href]="link.href"
-          class="font-montserrat leading-normal text-lg text-slate-gray"
-          >{{ link.label }}</a
-        >
+        <ng-container *ngIf="link.isAnchor; else page">
+          <a
+            [href]="link.href"
+            class="font-montserrat leading-normal text-lg text-slate-gray"
+          >
+            {{ link.label }}
+          </a>
+        </ng-container>
+        <ng-template #page>
+          <a
+            [routerLink]="link.href"
+            class="font-montserrat leading-normal text-lg text-slate-gray"
+          >
+            {{ link.label }}
+          </a>
+        </ng-template>
       </li>
     </ul>
     <div class="hidden max-lg:block">

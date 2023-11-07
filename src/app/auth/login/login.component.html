@@ -1,1 +1,87 @@
-<p>login works!</p>
+<h1
+  class="text-center font-palanquin text-2xl max-sm:text-[72px] max-sm:leading-[82px] font-bold"
+>
+  Sign in to your account
+</h1>
+<form action="#" method="POST" class="mx-auto max-w-xl mt-10">
+  <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+    <div class="sm:col-span-2">
+      <label for="email" class="block text-sm font-semibold leading-6"
+        >Email</label
+      >
+      <div class="mt-2.5">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          autocomplete="email"
+          class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-coral-red sm:text-sm sm:leading-6 focus-visible:outline-coral-red"
+        />
+      </div>
+    </div>
+
+    <div class="sm:col-span-2">
+      <label for="Password" class="block text-sm font-semibold leading-6"
+        >Password</label
+      >
+      <div class="mt-2.5">
+        <input
+          type="Password"
+          name="Password"
+          id="Password"
+          autocomplete="Password"
+          class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-coral-red sm:text-sm sm:leading-6 focus-visible:outline-coral-red"
+        />
+      </div>
+    </div>
+    <div class="flex gap-x-4 sm:col-span-2">
+      <div class="flext h-6 items-center justify-end">
+        <a
+          href="#"
+          class="mt-10 font-semibold text-smleading-6 text-coral-red hover:text-coral-red"
+          >Forgot password?</a
+        >
+      </div>
+    </div>
+  </div>
+  <div class="mt-10 flex justify-end">
+    <button type="submit" btn [mode]="btnType" class="w-full">Sign In</button>
+  </div>
+</form>
+<div class="relative mt-10 flex items-center justify-between">
+  <div class="flex-1" aria-hidden="true">
+    <div
+      class="leading-6 font-medium divide-gray-400 border-t-[1px] w-full"
+    ></div>
+  </div>
+  <div class="flex-1 text-center">
+    <span class="leading-6 text-slate-gray">Or continue with</span>
+  </div>
+  <div class="flex-1 flex items-center inset-0" aria-hidden="true">
+    <div
+      class="leading-6 font-medium divide-gray-400 border-t-[1px] w-full"
+    ></div>
+  </div>
+</div>
+<div class="relative mt-10 flex gap-5 items-center justify-between">
+  <button
+    btn
+    class="w-full px-3 py-1.5 text-sm font-semibold leading-6 shadow-sm"
+  >
+    Google
+  </button>
+  <button
+    btn
+    class="w-full px-3 py-1.5 text-sm font-semibold leading-6 shadow-sm"
+  >
+    Github
+  </button>
+</div>
+<p class="mt-10 text-center text-sm text-gray-500">
+  Not a member?
+  <a
+    routerLink="../sign-up"
+    class="font-semibold leading-6 text-coral-red hover:text-coral-red"
+    >Sign Up</a
+  >
+</p>
