@@ -16,6 +16,8 @@ import { ShoeCardComponent } from './components/shoe-card/shoe-card.component';
 import { PopularProductCardComponent } from './components/popular-product-card/popular-product-card.component';
 import { ServiceCardComponent } from './components/service-card/service-card.component';
 import { ReviewCardComponent } from './components/review-card/review-card.component';
+import { MatRippleModule } from '@angular/material/core';
+import { UserComponent } from './components/user/user.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,12 @@ import { ReviewCardComponent } from './components/review-card/review-card.compon
     ServiceCardComponent,
     ReviewCardComponent,
   ],
-  imports: [CommonModule, MainRoutingModule, BtnDirective],
+  imports: [
+    CommonModule,
+    MainRoutingModule,
+    BtnDirective,
+    MatRippleModule,
+    UserComponent,
+  ],
 })
 export class MainModule {}

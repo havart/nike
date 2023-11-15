@@ -12,10 +12,13 @@ import { environment } from '../environments/environment';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { initializeApp } from 'firebase/app';
 import { provideFirebaseApp } from '@angular/fire/app';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { MatRippleModule } from '@angular/material/core';
 
 const app = initializeApp(environment.firebase);
 
-export const AUTH = new InjectionToken('Firebase auth', {
+export const AUTH_APP = new InjectionToken('Firebase auth', {
   providedIn: 'root',
   factory: () => {
     const auth = getAuth();
@@ -28,20 +31,6 @@ export const AUTH = new InjectionToken('Firebase auth', {
   },
 });
 
-/* export const FIRESTORE = new InjectionToken('Firebase firestore', {
-  providedIn: 'root',
-  factory: () => {
-    let firestore: Firestore;
-    if (environment.useEmulators) {
-      firestore = initializeFirestore(app, {});
-      connectFirestoreEmulator(firestore, 'localhost', 8080);
-    } else {
-      firestore = getFirestore();
-    }
-    return firestore;
-  },
-}); */
-
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
@@ -50,5 +39,6 @@ export const appConfig: ApplicationConfig = {
       provideFirebaseApp(() => initializeApp(environment.firebase))
     ),
     importProvidersFrom(provideFirestore(() => getFirestore())),
+    importProvidersFrom(MatSnackBarModule),
   ],
 };

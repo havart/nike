@@ -14,15 +14,19 @@
           </a>
         </ng-container>
         <ng-template #page>
-          <a
-            [routerLink]="link.href"
-            class="font-montserrat leading-normal text-lg text-slate-gray"
-          >
-            {{ link.label }}
-          </a>
+          <ng-container *ngIf="!userSignedIn">
+            <a
+              [routerLink]="link.href"
+              class="font-montserrat leading-normal text-lg text-slate-gray"
+            >
+              {{ link.label }}
+            </a>
+          </ng-container>
+          <app-user *ngIf="userSignedIn"></app-user>
         </ng-template>
       </li>
     </ul>
+
     <div class="hidden max-lg:block">
       <img
         src="assets/icons/hamburger.svg"
