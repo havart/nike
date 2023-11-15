@@ -18,6 +18,7 @@ import { ServiceCardComponent } from './components/service-card/service-card.com
 import { ReviewCardComponent } from './components/review-card/review-card.component';
 import { MatRippleModule } from '@angular/material/core';
 import { UserComponent } from './components/user/user.component';
+import { CategoriesComponent } from './sections/categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { UserComponent } from './components/user/user.component';
     BtnDirective,
     MatRippleModule,
     UserComponent,
+    CategoriesComponent,
   ],
 })
 export class MainModule {}
