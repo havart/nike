@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div class="flex relative shadow-md">
+    <div class="flex">
       <div class="widget-header">
         <ng-container [ngTemplateOutlet]="headerTemplate"></ng-container>
       </div>
