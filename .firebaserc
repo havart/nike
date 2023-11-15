@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "newbot-3a2e8": {
+      "hosting": {
+        "nike": [
+          "newbot-3a2e8"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "newbot-3a2e8"
+  }
+}

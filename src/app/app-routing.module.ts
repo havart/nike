@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { isAuthorizedGuard } from './shared/guards/is-authorized.guard';
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '',
+    canActivate: [isAuthorizedGuard],
     loadChildren: () => import('./main/main.module').then((m) => m.MainModule),
   },
   {
@@ -11,9 +13,3 @@ const routes: Routes = [
     loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
   },
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-})
-export class AppRoutingModule {}
