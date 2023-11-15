@@ -1,3 +1,4 @@
+import { IProductCategories } from '../shared/interfaces';
 import { IShoe } from './components/shoe-card/shoe.interface';
 import { IProduct } from './sections/popular-products/product.interface';
 import { IService } from './sections/services/service.interface';
@@ -14,6 +15,9 @@ const shoe7 = 'assets/images/shoe7.svg';
 const thumbnailShoe1 = 'assets/images/thumbnail-shoe1.svg';
 const thumbnailShoe2 = 'assets/images/thumbnail-shoe2.svg';
 const thumbnailShoe3 = 'assets/images/thumbnail-shoe3.svg';
+const nikeOff1 = 'assets/images/nike-off-img_1.jpg';
+const nikeOff2 = 'assets/images/nike-off-img_2.jpg';
+const nikeOff3 = 'assets/images/nike-off-img_3.jpg';
 
 export const navLinks = [
   { href: '#home', label: 'Home' },
@@ -34,6 +38,24 @@ export const shoes: IShoe[] = [
   {
     thumbnail: thumbnailShoe3,
     bigShoe: bigShoe3,
+  },
+];
+
+export const productCategories: IProductCategories[] = [
+  {
+    thumbnail: nikeOff1,
+    title: "Don't Stop",
+    categories: ['Female'],
+  },
+  {
+    thumbnail: nikeOff2,
+    title: 'Be Strong',
+    categories: ['Male'],
+  },
+  {
+    thumbnail: nikeOff3,
+    title: 'Have Fun',
+    categories: ['Teens', 'Kids'],
   },
 ];
 
