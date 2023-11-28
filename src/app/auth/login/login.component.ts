@@ -1,5 +1,4 @@
 import { Component, inject } from '@angular/core';
-import { BtnType } from '../../main/ui/btn.type';
 import { LoginService } from '../services/login.service';
 import { finalize } from 'rxjs/operators';
 import { SignInInterface } from '../services/signin.interface';
@@ -10,7 +9,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  public btnType = BtnType.PRIMARY;
   public loginService = inject(LoginService);
   public router = inject(Router);
   public loading = false;
